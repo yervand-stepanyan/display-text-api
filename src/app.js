@@ -1,9 +1,7 @@
 const express = require("express");
 const app = express();
-const message = {message: "Hello World"};
+const Api = require("./api");
 
-app.get("/hello", (req, res) => {
-	res.send(message);
-});
+app.use("/", Api);
 
 module.exports = app;
